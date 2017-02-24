@@ -1,0 +1,16 @@
+form.add-movie,
+form.autofill-details{
+	line-height: 40px;
+}
+
+form.add-movie label,
+form.autofill-details label{
+	width: 200px;
+	display: inline-block;
+}
+
+form.add-movie input[type="text"], form.add-movie input[type="url"], 
+form.autofill-details input[type="text"], form.autofill-details input[type="url"]{
+	width: 400px;
+	padding: 5px;
+}

@@ -1,0 +1,780 @@
+/* Movie Hub - Stylesheet 
+   Copyright (c) 2014. Sri Lanka Institute of Information Technology. All Rights Reserved. */
+
+/* Imports */
+@import url("reset.css"); /* CSS Reset */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700); /* Google Font : Open Sans; */
+
+/* Main Styles */
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: normal;
+	text-align: left;
+	color: #999;
+	background: #333 url(../img/bg.png) left top repeat;
+}
+
+
+/* #BEGIN : Header */
+#header-wrap {
+	z-index: 999; /* Always on Top */
+	left:0;
+	top:0;
+	height:90px;
+	width:100%;
+	background: url(../img/header-bg.png) center top repeat-x;
+	position:fixed;
+}
+
+#header {
+	position:relative;
+	margin:0 auto;
+	width:960px;
+	height:80px;
+}
+
+#logo {
+	position:absolute;
+	left:0;
+	top:10px;
+	width: 90px;
+	height: 90px;
+}
+/* #END : Header */
+
+
+/* #BEGIN : Main Menu */
+nav {
+	float:right;
+}
+
+nav ul li {
+	position: relative;
+	float:left;
+}
+
+nav ul li a.menu {
+	margin-top:30px;
+	padding:0 18px 32px 18px;
+	text-align: center;
+	line-height: 18px;
+	font-size: 16px;
+	color: #fff;
+	text-decoration: none;
+	display: inline-block;
+}
+
+nav ul li a.menu:hover {
+	color: #1e86de;
+	text-decoration: none; /* Override default <a> text underline */
+}
+
+nav ul li a.sub-menu {
+	color: #fff;
+	text-decoration: none;
+	display: block;
+}
+
+nav ul li a.sub-menu:hover {
+	color: #fff;
+	text-decoration: none; /* Override default <a> text underline */
+}
+
+nav ul li ul {
+	position:absolute;
+	left:0;
+	top:80px;
+	width:160px;
+	visibility: hidden;
+	background:#2f2f2f;
+	box-shadow: 2px 2px 6px 0px #111;
+}
+
+nav ul li:hover ul { 
+  visibility: visible; 
+}
+
+nav ul li ul li {
+	width: 100%;
+	border-bottom:1px solid #3e3e3e;
+}
+
+nav li li:last-child { /* To prevent the last border bottom of sub menus */
+	border-bottom:none; 
+}
+
+nav ul li ul li a {
+	display: block;
+	text-align: left;
+	margin-top:0;
+	font-size:12px;
+	line-height:20px;
+	padding:10px 18px;
+}
+
+nav ul li ul li a:hover {
+	background-color: #1e86de;
+	color: #fff;
+}
+
+		/* Cart */
+
+		nav ul li div#cart{
+			color: #fff;
+			position:absolute;
+			visibility: hidden;
+			padding: 10px;
+			background-color: #000;
+			box-shadow: 2px 2px 6px 0px #111;
+			background:#333;
+			right: 0px;
+			width: 420px;
+		}
+
+		nav ul li:hover div#cart{
+			visibility: visible;
+		}
+
+		nav ul li:hover div#cart table{
+			margin-bottom: 10px;
+		}
+
+		nav ul li:hover div#cart table td{
+			padding: 6px;
+		}
+
+		nav ul li:hover div#cart input{
+			width: 48%;
+			height: 30px;
+		}
+
+		nav ul li#cart-menu{
+			background-color: #1e86de; 
+
+			color: #000;
+		}
+
+		nav ul li#cart-menu a:hover{
+			color: #fff;
+		}
+
+		nav ul li#cart-menu img{
+			vertical-align: middle; 
+			margin-left: 15px;
+			cursor: pointer;
+		}
+
+		/* END: Cart */
+
+		nav ul li div#user{
+			color: #fff;
+			position:absolute;
+			visibility: hidden;
+			padding: 10px;
+			background-color: #000;
+			box-shadow: 2px 2px 6px 0px #111;
+			background:#333;
+			right: 0px;
+			width: 230px;
+		}
+
+		nav ul li:hover div#user{
+			visibility: visible;
+		}
+
+		nav ul li:hover div#user input{
+			width: 48%;
+			height: 30px;
+		}
+
+		nav ul li#user-menu{
+			background-color: #245986; 
+			color: #000;
+			width: 70px;
+			
+		}
+
+		nav ul li#user-menu img.icon{
+			vertical-align: middle; 
+			margin-left: 21px;
+			cursor: pointer;
+		}
+
+.film-name, .total{
+	width:270px;
+	margin-right: 5px;
+	margin-left: 2px;
+}
+
+.film-price, .total-price{
+	width: 100px;
+	text-align: right;
+}
+
+.total{
+	width: 100px;
+	text-align: right;
+	background-color: #222;
+}
+
+.total-price{
+	font-weight: bold;
+	background-color: #222;
+}
+
+.remove{
+	margin-left: 0px !important;
+	margin-right: 8px;
+}
+
+.current-page{
+  background-color: #000; 
+}
+
+.current-page a:hover{
+  color: #fff;
+}
+/* #END : Main Menu */
+
+/* #BEGIN : Under Header */
+section#under-header-wrap {
+	width:100%;
+	height:580px;
+	overflow:hidden;
+	background:transparent url(../img/background.jpg) center top repeat-x;
+}
+
+#glow{
+	background:transparent url(../img/glow.png) center top no-repeat;
+	height: 200px;
+	width: 100%;
+	position: absolute;
+}
+
+section#under-header-wrap div#login, section#under-header-wrap div#welcome{
+	margin-top: 20px;
+	width: 25%;
+	height: 180px;
+	float: right;
+}
+
+section#under-header-wrap div#login input[type=text], 
+section#under-header-wrap div#login input[type=password],
+section#under-header-wrap div#welcome input[type=text], 
+section#under-header-wrap div#welcome input[type=password]
+{
+	width: 90%;
+	padding: 5px 10px 5px 10px;
+	height: 25px;
+	margin-bottom: 10px;
+	border-radius: 8px;
+	background: url(../img/text-bg.jpg);
+	border: 0px solid #fff;
+}
+
+section#under-header-wrap div#login input[type=text]:focus,
+section#under-header-wrap div#login input[type=password]:focus,
+section#under-header-wrap div#welcome input[type=text]:focus,
+section#under-header-wrap div#welcome input[type=password]:focus
+{
+	outline: 0;
+}
+
+section#under-header-wrap div#login input[type=submit],
+section#under-header-wrap div#welcome input[type=submit]{
+	height: 28px;
+	width: 90px;
+}
+
+
+
+
+
+
+
+div#login2{
+
+}
+
+div#login2 input[type=text], 
+div#login2 input[type=password]
+{
+	width: 90% !important;
+	padding: 5px 10px 5px 10px;
+	height: 25px;
+	margin-bottom: 10px;
+	border-radius: 8px;
+	background: url(../img/text-bg.jpg);
+	border: 0px solid #fff;
+}
+
+div#login2 input[type=text]:focus,
+div#login2 input[type=password]:focus
+{
+	outline: 0;
+}
+
+div#login2 input[type=submit]{
+	height: 28px;
+	width: 90px;
+}
+
+
+
+
+
+
+
+
+
+
+
+section#under-header-wrap div#movie-search{
+	margin-top: 20px;
+	width: 75%;
+	height: 180px;
+	float: left;
+}
+
+.search-button{
+	background: url(../img/search.png) no-repeat;
+	background-position: center center;
+}
+/* #END : Under Header */
+
+.blue-button{
+	border-radius: 5px;
+	border:1px solid #337fed;
+	color:#ffffff;
+	font-size:15px;
+	font-weight:bold;
+	line-height:65px;
+	text-align:center;
+	text-shadow:1px 1px 0px #1570cd;
+	background-color:#3689ee;
+}
+
+.blue-button:hover{
+	background-color:#2a76df;
+}
+
+.blue-button:active{
+	position: relative;
+	top: 1px;
+}
+
+.blue-button:focus{
+	outline: 0;
+}
+
+
+#latest{
+	height: 1050px;
+}
+
+#latest{
+	height: 1050px;
+}
+
+/* #BEGIN : User Registration */
+form.registration label{
+	width: 150px;
+	float: left;
+	font-weight: normal;
+	font-size: 15px;
+	margin-bottom: 5px;
+}
+
+form.registration input{
+	height: 25px;
+	margin-bottom: 10px;
+	width: 350px;
+	padding: 3px;
+	border-radius: 8px;
+	background: url(../img/text-bg.jpg);
+	border: 0px solid #fff;
+}
+/* #END : User Registration */
+
+/* #BEGIN : Footer */
+footer {
+	clear:both;
+	width:100%;
+	display: inline-block;
+	height:200px;
+	background: url(../img/footer-bg.png) center top repeat-x;
+	
+}
+
+footer li{
+	display: inline-block;
+	border-right: 1px solid #888;
+	padding-right: 8px;
+}
+
+footer li:last-child{
+	border-right: 0px solid #fff;
+	padding-left: 8px;
+}
+
+#footer{
+	margin-top: 50px;
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#copyright {
+	width:960px;
+	margin-top:10px;
+	clear:both;
+	line-height: 25px;
+}
+#copyright p {
+	text-align:center;
+	font-size:14px;
+	color:#ccc;
+	margin-bottom:0;
+}
+
+/* Footer SLIIT Logo */
+div.sliit-logo { 
+	position:relative;
+	width:251px;
+	height:64px;
+	background:transparent url(../img/sliit-logo.png) left top no-repeat;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div:hover.sliit-logo { 
+	background:transparent url(../img/sliit-logo.png) left bottom no-repeat; 
+}
+ /* END Footer SLIIT Logo */
+/* #END : Footer */
+
+.movie-list header {
+	width:222px;
+	height:35px;
+	background: url(../img/movie-header.png) center top no-repeat;
+}
+
+.movie-list header span {
+	color:#fff;
+	padding:8px 16px 0 16px;
+	display:block;
+	text-shadow:0 1px 0 #333;
+	text-align: center;
+	font-size: 13px;
+
+}
+
+.movie-list footer {
+	width:222px;
+	clear:both;
+	height:80px;
+	background: url(../img/movie-footer.png) center top no-repeat;
+}
+
+.movie-list a:hover{
+	text-decoration: none;
+}
+
+.home-movie input[type="text"]{
+	border-radius: 10px;
+	width: 415px;
+	height: 40px;
+	padding: 5px 15px 5px 15px;
+	background: url(../img/text-bg.jpg);
+	background-size: 20px 50px;
+	font-size: 18px;
+	border: 1px solid #fff;
+	vertical-align: bottom;
+
+}
+
+.home-movie input[type="text"]:focus{
+	outline: 0;
+}
+
+.home-movie input[type="submit"]{
+	border-radius: 10px;
+	height: 53px;
+	width:70px;
+	padding: 5px 5px 5px 10px;
+	margin-left: 3px;
+	font-size: 14px;
+	vertical-align: bottom;
+}
+
+.home-movie input[type="button"]{
+	border-radius: 10px;
+	height: 53px;
+	width:170px;
+	padding: 5px 5px 5px 10px;
+	margin-left: 3px;
+	font-size: 16px;
+	vertical-align: bottom;
+}
+
+.column {
+	float:left;
+	display:inline;
+	position:relative;
+	overflow:hidden;
+	width:222px;
+	margin-right:24px;
+}
+
+.last {
+	margin-right:0 !important;
+}
+
+.content {
+	margin:0 auto;
+	width:960px;
+	padding:80px 0 80px 0;
+}
+
+.movie-poster {
+	position:relative;
+	overflow:hidden;
+	width:100%;
+	height:329px;
+	z-index:1;
+}
+
+
+
+
+
+a {
+	color:#3399ff;
+	text-decoration:none;
+}
+
+a:hover { 
+	text-decoration:underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	line-height: 140%;
+	color:#fff;
+}
+
+h1 { font-size: 36px; }
+h2 { font-size: 30px; }
+h3 { font-size: 24px; }
+h4 { font-size: 18px; }
+h5 { font-size: 14px; }
+h6 { font-size: 12px; }
+
+button, input[type="reset"], input[type="button"], input[type="submit"] { line-height:normal; }
+
+input[type="text"], input[type="password"], textarea {
+	color: #666;
+	font-size: 14px;
+}
+
+.movie-cat {
+	/*text-align:center;*/
+}
+
+.movie-cat span {
+	text-align:center;
+	margin:7px auto 10px 8px;
+	line-height:normal;
+	padding:2px 12px;
+	display:inline-block;
+	border-radius:10px;
+	width:auto;
+	color:#999;
+	font-size:14px;
+	background:#333;
+	text-transform:uppercase;
+	border-bottom:1px solid #666;
+}
+
+.movie-cat input[type="button"] {
+	border-bottom:1px solid #73beff;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	border-radius: 10px;
+	margin-left: 6px;
+	/*
+	text-align:center;
+	margin:7px auto 10px 8px;
+	line-height:normal;
+	padding:2px 12px;
+	display:inline-block;
+	border-radius:10px;
+	width:auto;
+	
+	font-size:14px;
+	background:#333;
+	text-transform:uppercase;
+	
+
+
+		
+	color:#ffffff;
+	font-size:15px;
+	font-weight:bold;
+	line-height:65px;
+	text-align:center;
+	text-shadow:1px 1px 0px #1570cd;
+	
+	*/
+}
+
+
+.inner-wrap{
+	width: 85%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+.text-center{
+	text-align: center;
+}
+
+.center{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div#carouselhAuto a{
+	color: #fff;
+}
+
+div#carouselhAuto a:hover{
+	text-decoration: none;
+}
+
+.movie-info{
+	position: absolute;
+	height: 120px;
+	width: 114px;
+	background-color: rgba(0,0,0,0.8);
+	left: 0px;
+	top: 0px;
+}
+
+.movie-info-2{
+	position: absolute;
+	height: 59px;
+	width: 114px;
+	background-color: rgba(0,0,0,0.6);
+	left: 0px;
+	top: 120px;
+}
+
+.movie-slider-div div.movie-info{
+	display:none;
+}
+
+.movie-slider-div div.movie-info-2{
+	display:none;
+}
+
+.movie-slider-div:hover div.movie-info{
+	display:block;
+}
+
+.movie-slider-div:hover div.movie-info-2{
+	display:block;
+}
+
+div#carouselhAuto div div.movie-info:hover{
+	display: block;
+}
+
+.info{
+	width: 222px;
+	height: 329px;
+	position: absolute;
+	background-color: rgba(0,0,0,0.6);
+	z-index: 2;
+	display:block;
+}
+
+.column div.info{
+	display:none;
+}
+
+.column:hover div.info{
+	display:block;
+}
+
+
+/* ---- Movie Page-------------------------------------------------------------------------------------------------------------------------------------------*/
+section#under-header-wrap-moviepage {
+	width:100%;
+	height:300px;
+	overflow:hidden;
+	
+}
+#MovieName
+{
+	width:550px;
+	height: 100px;
+	font-size:35px ;
+	line-height: 100px;
+	float:left;
+
+	vertical-align:middle 
+
+}
+
+#Stars1
+{
+
+	width: 0px;
+	height:100px;
+	float:right;
+
+	overflow: hidden;
+	z-index: 1;
+	margin-top: 30px;
+
+}
+
+#Stars2
+{
+	margin-top: 30px;
+	width: 200px;
+	height: 100px;
+
+	z-index: -1;
+	overflow: hidden;
+
+
+}
+#rating
+{
+	line-height: 90px;
+	float:right;
+	text-align: center;
+
+}
+
+#ratingcont
+{
+
+	position: relative;
+	width: 200px;
+	left:700px;
+}
+
+.search-desc{
+	font-size: 16px;
+	line-height: 25px;
+}
+
+
